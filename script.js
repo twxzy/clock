@@ -56,3 +56,44 @@ function activateLightMode() {
 }
 
 darkButton.addEventListener('click', activateDarkMode);
+
+
+/*Display Clock*/
+
+let hours = document.getElementById('hours')
+let minutes = document.getElementById('minutes')
+let seconds = document.getElementById('seconds')
+
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(() => {
+        const now = new Date();
+        
+        /*hours*/
+        
+        if(hours.innerHTML > 9){
+            hours.innerHTML = now.getHours()
+        }
+        if(hours.innerHTML < 9){
+            hours.innerHTML = '0' + now.getHours()
+        }
+
+        /*minutes*/
+
+        if(minutes.innerHTML > 9){
+            minutes.innerHTML = now.getMinutes()
+        }
+        if(minutes.innerHTML < 9){
+            minutes.innerHTML = '0' + now.getMinutes()
+        }
+
+        /*seconds*/
+
+        if(seconds.innerHTML > 9){
+            seconds.innerHTML = now.getSeconds()
+        }
+        
+        if(seconds.innerHTML < 9){
+            seconds.innerHTML = '0' + now.getSeconds()
+        }
+    },0);
+});
