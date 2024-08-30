@@ -12,6 +12,7 @@ body{
   justify-content: center;
   align-items: center;
   height: 100vh;
+  transition: 0.2s background-color ease-in-out;
 }
 
 .container{
@@ -33,7 +34,7 @@ body{
   align-items: center;
 }
 
-.horas, .minutos, .segundos{
+.card{
   width: 100%;
   height: 100%;
   display: flex;
@@ -83,7 +84,7 @@ body{
   align-items: center;
 }
 
-.darkMode > button{
+#dark{
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -94,10 +95,25 @@ body{
   border-radius: 10px;
 }
 
+#light{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #24292D;
+  background-color: white;
+  border-radius: 10px;
+}
+
 .pmAm{
   color: #24292D;
   font-family: "Orbitron", sans-serif;
   font-weight: 500;
   margin-left: 15px;
   font-size: 18px;
+}
+
+#dark > i, #light > i{
+  font-size: 20px;
 }
